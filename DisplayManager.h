@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "GameWorld.h"
+#include "UnitedPhysicEngine/U_2DBody.h"
 
 class DisplayManager
 {
