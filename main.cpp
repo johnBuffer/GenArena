@@ -42,6 +42,9 @@ int main()
 					else if ((event.key.code == sf::Keyboard::Subtract)) displayManager.zoom(0.8);
 					else if ((event.key.code == sf::Keyboard::Add)) displayManager.zoom(1.2);
                     break;
+				case sf::Event::MouseWheelMoved:
+					displayManager.zoom(1+(double)event.mouseWheel.delta/5);
+                    break;
                 case sf::Event::MouseButtonPressed:
                     mouseButtonPressed = true;
                     dragClicPosition = mousePosition;
