@@ -15,7 +15,7 @@ int main()
     window.setVerticalSyncEnabled(false);
     window.setMouseCursorVisible(true);
 
-    GameWorld gameWorld(U_2DCoord(10000, 10000));
+    GameWorld gameWorld(U_2DCoord(20000, 20000));
     DisplayManager displayManager(&window, &gameWorld);
 
     // dragging
@@ -26,8 +26,7 @@ int main()
     gameWorld.addNewGuy(U_2DCoord(200, 200));
 
     // add more test guys
-    for (int i(0); i<4000; ++i) gameWorld.addNewGuy(U_2DCoord(rand()%10000, rand()%10000));
-
+    for (int i(0); i<3000; ++i) gameWorld.addNewGuy(U_2DCoord(rand()%1000, rand()%1000));
 
     while (window.isOpen())
     {
@@ -57,6 +56,12 @@ int main()
                         displayManager.addOffset(mousePosition.x-dragClicPosition.x, mousePosition.y-dragClicPosition.y);
                         dragClicPosition = mousePosition;
                     }
+                    break;
+                case sf::Event::Resized:
+                    windowWidth = event.size.width;
+                    windowHeight = event.size.height;
+
+                    window.create(sf::VideoMode(windowWidth, windowHeight), "Genetic", sf::Style::Default, settings);
                     break;
 				default:
                     break;

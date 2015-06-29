@@ -17,11 +17,13 @@ void DisplayManager::draw()
     double windowOffsetX = m_window->getSize().x/2;
     double windowOffsetY = m_window->getSize().y/2;
 
+    // draw the world's ground as a big black square
     sf::RectangleShape ground(sf::Vector2f(m_GameWorld->getWorldSize().x*m_zoom, m_GameWorld->getWorldSize().y*m_zoom));
     ground.setFillColor(sf::Color::Black);
     ground.setPosition(m_offsetX*m_zoom+windowOffsetX, m_offsetY*m_zoom+windowOffsetY);
     m_window->draw(ground);
 
+    // draw the guys
     double radius = m_GameWorld->getGuyRadius()*m_zoom;
     sf::CircleShape guyRepresentation(radius);
     guyRepresentation.setOrigin(radius, radius);
