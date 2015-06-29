@@ -43,7 +43,8 @@ int main()
 					else if ((event.key.code == sf::Keyboard::Add)) displayManager.zoom(1.2);
                     break;
 				case sf::Event::MouseWheelMoved:
-					displayManager.zoom(1+(double)event.mouseWheel.delta/5);
+				    // this is an amazing zoom
+					displayManager.zoom(1+event.mouseWheel.delta/5.0);
                     break;
                 case sf::Event::MouseButtonPressed:
                     mouseButtonPressed = true;

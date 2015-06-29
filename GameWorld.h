@@ -8,8 +8,11 @@ class GameWorld
 {
 public:
     GameWorld(U_2DCoord worldSize);
+
+    // go on the next iteration
     void update();
 
+    // add a new guy in the world
     void addNewGuy(U_2DCoord position);
 
     // accessors

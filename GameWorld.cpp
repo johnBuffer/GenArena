@@ -23,8 +23,6 @@ void GameWorld::addNewGuy(U_2DCoord position)
     m_physicGuys.push_back(newBody);
 
     // add the first impulsion with a random angle
-    double angle = (rand()%360)*DEG_TO_RAD;
-    newBody->accelerate2D(U_2DCoord(100*cos(angle), 100*sin(angle)));
     m_guys.push_back(new Guy(newBody));
 }
 
