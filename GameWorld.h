@@ -13,10 +13,12 @@ public:
 
 
     Guy* getGuyAt(int i) {return m_guys[i];};
+    int getGuyCount() const {return m_GuyCount;};
+    int getGuyRadius() const {return m_GuyRadius;};
 
 private:
     U_2DCollisionManager m_collisionManager;
-    int m_GuyCount;
+    int m_GuyCount, m_GuyRadius;
     std::vector<Guy*> m_guys;
     std::vector<U_2DBody*> m_physicGuys;
     std::map<U_2DBody*, Guy*> m_GuyLinker;

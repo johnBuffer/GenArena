@@ -14,6 +14,8 @@ public:
 private:
     GameWorld* m_GameWorld;
     sf::RenderWindow* m_window;
+
+    double m_zoom, m_offsetX, m_offsetY;
 };
 
 #endif // DISPLAYMANAGER_H_INCLUDED
