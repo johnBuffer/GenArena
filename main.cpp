@@ -12,10 +12,10 @@ int main()
     sf::ContextSettings settings;
     settings.antialiasingLevel = 4;
     sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Genetic", sf::Style::Default, settings);
-    window.setVerticalSyncEnabled(false);
+    window.setVerticalSyncEnabled(true);
     window.setMouseCursorVisible(true);
 
-    GameWorld gameWorld(U_2DCoord(20000, 20000));
+    GameWorld gameWorld(U_2DCoord(2000, 2000));
     DisplayManager displayManager(&window, &gameWorld);
 
     // dragging
@@ -26,7 +26,7 @@ int main()
     gameWorld.addNewGuy(U_2DCoord(200, 200));
 
     // add more test guys
-    for (int i(0); i<3000; ++i) gameWorld.addNewGuy(U_2DCoord(rand()%500, rand()%10000));
+    for (int i(0); i<500; ++i) gameWorld.addNewGuy(U_2DCoord(rand()%2000, rand()%2000));
 
     while (window.isOpen())
     {

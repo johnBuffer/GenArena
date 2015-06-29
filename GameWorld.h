@@ -26,6 +26,8 @@ private:
     std::vector<U_2DBody*> m_physicGuys;
     std::map<U_2DBody*, Guy*> m_GuyLinker;
 
+    void updateGuys();
+
 };
 
 #endif // GAMEWORLD_H_INCLUDED

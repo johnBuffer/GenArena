@@ -28,7 +28,23 @@ void GameWorld::addNewGuy(U_2DCoord position)
     m_guys.push_back(new Guy(newBody));
 }
 
+void GameWorld::updateGuys()
+{
+    for (int i(0); i<m_GuyCount; ++i)
+    {
+        m_guys[i]->update();
+        if (m_guys[i]->needNewDirection())
+        {
+            m_physicGuys[i]->stop();
+            double angle = (rand()%360)*DEG_TO_RAD;
+            m_physicGuys[i]->accelerate2D(U_2DCoord(100*cos(angle), 100*sin(angle)));
+            m_guys[i]->setNewDirection();
+        }
+    }
+}
+
 void GameWorld::update()
 {
+    updateGuys();
     m_collisionManager.update();
 }
