@@ -10,7 +10,7 @@ GameWorld::GameWorld(U_2DCoord worldSize)
     m_GuyRadius = 30;
     m_collisionManager = U_2DCollisionManager(0.016, m_GuyRadius, worldSize);
     m_collisionManager.setGravity(U_2DCoord(0, 0));
-    m_collisionManager.setPrecision(3);
+    m_collisionManager.setPrecision(1);
     m_worldSize = worldSize;
     m_GuyCount = 0;
 }

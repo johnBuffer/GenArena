@@ -1,4 +1,5 @@
 #include "DisplayManager.h"
+#include <iostream>
 
 DisplayManager::DisplayManager(sf::RenderWindow *window, GameWorld *gameWorld)
 {
@@ -12,9 +13,13 @@ DisplayManager::DisplayManager(sf::RenderWindow *window, GameWorld *gameWorld)
 
 void DisplayManager::draw()
 {
-    sf::RectangleShape ground(sf::Vector2f(m_GameWorld->getWorldSize().x, m_GameWorld->getWorldSize().y));
+    // these offsets allow the view to be centered on window
+    double windowOffsetX = m_window->getSize().x/2;
+    double windowOffsetY = m_window->getSize().y/2;
+
+    sf::RectangleShape ground(sf::Vector2f(m_GameWorld->getWorldSize().x*m_zoom, m_GameWorld->getWorldSize().y*m_zoom));
     ground.setFillColor(sf::Color::Black);
-    ground.setPosition(m_offsetX*m_zoom, m_offsetY*m_zoom);
+    ground.setPosition(m_offsetX*m_zoom+windowOffsetX, m_offsetY*m_zoom+windowOffsetY);
     m_window->draw(ground);
 
     double radius = m_GameWorld->getGuyRadius()*m_zoom;
@@ -29,7 +34,7 @@ void DisplayManager::draw()
         double bodyX = currentBody->getPosition().x;
         double bodyY = currentBody->getPosition().y;
 
-        guyRepresentation.setPosition((bodyX+m_offsetX)*m_zoom, (bodyY+m_offsetY)*m_zoom);
+        guyRepresentation.setPosition((bodyX+m_offsetX)*m_zoom+windowOffsetX, (bodyY+m_offsetY)*m_zoom+windowOffsetY);
         m_window->draw(guyRepresentation);
     }
 }

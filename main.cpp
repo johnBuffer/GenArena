@@ -12,10 +12,10 @@ int main()
     sf::ContextSettings settings;
     settings.antialiasingLevel = 4;
     sf::RenderWindow window(sf::VideoMode(windowWidth, windowHeight), "Genetic", sf::Style::Default, settings);
-    window.setVerticalSyncEnabled(true);
+    window.setVerticalSyncEnabled(false);
     window.setMouseCursorVisible(true);
 
-    GameWorld gameWorld(U_2DCoord(2000, 2000));
+    GameWorld gameWorld(U_2DCoord(10000, 10000));
     DisplayManager displayManager(&window, &gameWorld);
 
     // dragging
@@ -24,6 +24,9 @@ int main()
 
     // add a test guy
     gameWorld.addNewGuy(U_2DCoord(200, 200));
+
+    // add more test guys
+    for (int i(0); i<4000; ++i) gameWorld.addNewGuy(U_2DCoord(rand()%10000, rand()%10000));
 
 
     while (window.isOpen())
@@ -37,6 +40,8 @@ int main()
 			{
 				case sf::Event::KeyPressed:
 					if (event.key.code == sf::Keyboard::Escape) window.close();
+					else if ((event.key.code == sf::Keyboard::Subtract)) displayManager.zoom(0.8);
+					else if ((event.key.code == sf::Keyboard::Add)) displayManager.zoom(1.2);
                     break;
                 case sf::Event::MouseButtonPressed:
                     mouseButtonPressed = true;
