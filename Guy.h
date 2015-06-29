@@ -2,7 +2,7 @@
 #define GUY_H_INCLUDED
 
 #include "UnitedPhysicEngine/U_2DBody.h"
-#include <vector>
+#include "Dna.h"
 
 class Guy
 {
@@ -15,6 +15,7 @@ private:
     int m_dnaLength;
 
     //ajouter DNA here
+    Dna m_DNA;
 
     U_2DBody* m_body;
 };

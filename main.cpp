@@ -26,7 +26,7 @@ int main()
     gameWorld.addNewGuy(U_2DCoord(200, 200));
 
     // add more test guys
-    for (int i(0); i<3000; ++i) gameWorld.addNewGuy(U_2DCoord(rand()%1000, rand()%1000));
+    for (int i(0); i<3000; ++i) gameWorld.addNewGuy(U_2DCoord(rand()%500, rand()%10000));
 
     while (window.isOpen())
     {

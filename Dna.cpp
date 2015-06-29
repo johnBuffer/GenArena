@@ -1,5 +1,10 @@
 #include "Dna.h"
 
+Dna::Dna()
+{
+	m_dnaSize = 0;
+}
+
 Dna::Dna(std::string& fileName)
 {
 	m_dnaSize = 0;
