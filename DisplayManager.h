@@ -10,6 +10,9 @@ class DisplayManager
 public:
     DisplayManager(sf::RenderWindow *window, GameWorld *gameWorld);
 
+    void setOffset(double x, double y) {m_offsetX=x; m_offsetY=y;};
+    void addOffset(double x, double y) {m_offsetX+=x; m_offsetY+=y;};
+
     void draw();
 
 private:
