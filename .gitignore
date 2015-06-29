@@ -41,3 +41,11 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.depend
+obj/Release/Guy.o
+*.o
+bin/Release/sfml-graphics-d-2.dll
+*.dll
+bin/Release/sfmlTemplate.exe
+*.cbp
+sfmlTemplate.layout

@@ -1,0 +1,10 @@
+maxHealth 10
+aggro 8
+diet 2
+movingSpeed 8
+attackSpeed 8
+stamina 8
+force 8
+reproductionRate 8
+growthRate 8
+declineRate 8
