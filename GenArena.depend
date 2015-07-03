@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1435912685 source:c:\users\john\documents\cpp\labo\geneticcomputing\genarena\main.cpp
+1435916130 source:c:\users\john\documents\cpp\labo\geneticcomputing\genarena\main.cpp
 	<SFML/Graphics.hpp>
 	"GameWorld.h"
 	"DisplayManager.h"
@@ -382,56 +382,62 @@
 	<string>
 	<vector>
 
-1435584954 c:\users\john\documents\cpp\labo\geneticcomputing\genarena\gameworld.h
+1435914490 c:\users\john\documents\cpp\labo\geneticcomputing\genarena\gameworld.h
 	"UnitedPhysicEngine/U_2DCollisionManager.h"
 	"Guy.h"
 
-1435565188 c:\users\john\documents\cpp\labo\geneticcomputing\genarena\unitedphysicengine\u_2dcollisionmanager.h
+1435594361 c:\users\john\documents\cpp\labo\geneticcomputing\genarena\unitedphysicengine\u_2dcollisionmanager.h
 	"U_2DBody.h"
 	"U_2DConstraint.h"
+	"U_2DAttraction.h"
 	<map>
 	<vector>
 	<cmath>
 
-1435579639 c:\users\john\documents\cpp\labo\geneticcomputing\genarena\unitedphysicengine\u_2dbody.h
+1435913679 c:\users\john\documents\cpp\labo\geneticcomputing\genarena\unitedphysicengine\u_2dbody.h
 	"U_2DCoord.h"
 
-1435308299 c:\users\john\documents\cpp\labo\geneticcomputing\genarena\unitedphysicengine\u_2dcoord.h
+1435593387 c:\users\john\documents\cpp\labo\geneticcomputing\genarena\unitedphysicengine\u_2dcoord.h
 
 1435498649 c:\users\john\documents\cpp\labo\geneticcomputing\genarena\unitedphysicengine\u_2dconstraint.h
 	"U_2DBody.h"
 	<cmath>
 
-1435579906 c:\users\john\documents\cpp\labo\geneticcomputing\genarena\guy.h
+1435915935 c:\users\john\documents\cpp\labo\geneticcomputing\genarena\guy.h
 	"UnitedPhysicEngine/U_2DBody.h"
+	"UnitedPhysicEngine/U_2DOperators.h"
 	"Dna.h"
 
-1435584976 source:c:\users\john\documents\cpp\labo\geneticcomputing\genarena\gameworld.cpp
+1435914839 source:c:\users\john\documents\cpp\labo\geneticcomputing\genarena\gameworld.cpp
 	"GameWorld.h"
 	<cstdlib>
 
-1435579239 source:c:\users\john\documents\cpp\labo\geneticcomputing\genarena\guy.cpp
+1435916445 source:c:\users\john\documents\cpp\labo\geneticcomputing\genarena\guy.cpp
 	"Guy.h"
+	"DisplayManager.h"
+	<cmath>
 
-1435564222 source:c:\users\john\documents\cpp\labo\geneticcomputing\genarena\unitedphysicengine\u_2dbody.cpp
+1435913668 source:c:\users\john\documents\cpp\labo\geneticcomputing\genarena\unitedphysicengine\u_2dbody.cpp
 	"U_2DBody.h"
+	"U_2DOperators.h"
 
-1435564461 source:c:\users\john\documents\cpp\labo\geneticcomputing\genarena\unitedphysicengine\u_2dcollisionmanager.cpp
+1435666487 source:c:\users\john\documents\cpp\labo\geneticcomputing\genarena\unitedphysicengine\u_2dcollisionmanager.cpp
 	"U_2DCollisionManager.h"
 	<iostream>
 
 1435500112 source:c:\users\john\documents\cpp\labo\geneticcomputing\genarena\unitedphysicengine\u_2dconstraint.cpp
 	"U_2DConstraint.h"
 
-1435308754 source:c:\users\john\documents\cpp\labo\geneticcomputing\genarena\unitedphysicengine\u_2dcoord.cpp
+1435593426 source:c:\users\john\documents\cpp\labo\geneticcomputing\genarena\unitedphysicengine\u_2dcoord.cpp
 	"U_2DCoord.h"
+	<cmath>
 
-1435574687 c:\users\john\documents\cpp\labo\geneticcomputing\genarena\displaymanager.h
+1435916481 c:\users\john\documents\cpp\labo\geneticcomputing\genarena\displaymanager.h
 	<SFML/Graphics.hpp>
 	"GameWorld.h"
 	"UnitedPhysicEngine/U_2DBody.h"
 
-1435574601 source:c:\users\john\documents\cpp\labo\geneticcomputing\genarena\displaymanager.cpp
+1435916201 source:c:\users\john\documents\cpp\labo\geneticcomputing\genarena\displaymanager.cpp
 	"DisplayManager.h"
 	<iostream>
 
@@ -445,4 +451,25 @@
 	<vector>
 	<fstream>
 	<ctime>
+
+1435593878 c:\users\john\documents\cpp\labo\geneticcomputing\genarena\unitedphysicengine\u_2dattraction.h
+	"U_2DBody.h"
+
+1435593282 c:\users\john\documents\cpp\labo\geneticcomputing\genarena\unitedphysicengine\u_2doperators.h
+
+1435595139 source:c:\users\john\documents\cpp\labo\geneticcomputing\genarena\unitedphysicengine\u_2dattraction.cpp
+	"U_2DAttraction.h"
+	"U_2DOperators.h"
+	<stdlib.h>
+
+1435593310 source:c:\users\john\documents\cpp\labo\geneticcomputing\genarena\unitedphysicengine\u_2doperators.cpp
+	"U_2DCoord.h"
+
+1435592572 source:c:\users\john\documents\cpp\labo\geneticcomputing\genarena\utils.cpp
+	"utils.h"
+
+1435592572 c:\users\john\documents\cpp\labo\geneticcomputing\genarena\utils.h
+	<vector>
+	<math.h>
+	<algorithm>
 

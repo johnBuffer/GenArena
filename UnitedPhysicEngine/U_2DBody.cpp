@@ -1,6 +1,15 @@
 #include "U_2DBody.h"
 #include "U_2DOperators.h"
 
+U_2DBody::U_2DBody()
+{
+    m_position = U_2DCoord();
+    m_lastPosition = U_2DCoord();
+    m_mass = 1;
+    m_acceleration = U_2DCoord();
+    m_static = false;
+}
+
 U_2DBody::U_2DBody(U_2DCoord position, double mass)
 {
     m_position = position;
@@ -23,9 +32,6 @@ void U_2DBody::accelerate2D(U_2DCoord vec)
 
 void U_2DBody::updatePosition(double timeStep)
 {
-    //double newX = 2*m_position.x-m_lastPosition.x+m_acceleration.x*timeStep;
-    //double newY = 2*m_position.y-m_lastPosition.y+m_acceleration.y*timeStep;
-
     U_2DCoord newPosition = 2*m_position-m_lastPosition+timeStep*m_acceleration;
 
     if (!m_static)

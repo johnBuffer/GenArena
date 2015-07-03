@@ -13,7 +13,7 @@ public:
     void update();
 
     // add a new guy in the world
-    void addNewGuy(U_2DCoord position);
+    Guy* addNewGuy(U_2DCoord position);
 
     // accessors
     Guy* getGuyAt(int i) {return m_guys[i];};

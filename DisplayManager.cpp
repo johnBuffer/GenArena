@@ -40,3 +40,8 @@ void DisplayManager::draw()
         m_window->draw(guyRepresentation);
     }
 }
+
+void DisplayManager::follow(Guy* guy)
+{
+    guy->setFollower(this);
+}

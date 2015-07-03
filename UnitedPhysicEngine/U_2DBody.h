@@ -6,6 +6,7 @@
 class U_2DBody
 {
 public:
+    U_2DBody();
     U_2DBody(U_2DCoord position, double mass);
     void move2D(U_2DCoord vec);
     void accelerate2D(U_2DCoord acc);

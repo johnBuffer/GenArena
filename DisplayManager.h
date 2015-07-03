@@ -12,7 +12,11 @@ public:
 
     //offset mutators
     void setOffset(double x, double y) {m_offsetX=x; m_offsetY=y;};
+    void setOffset(U_2DCoord off) {m_offsetX=off.x; m_offsetY=off.y;};
+
     void addOffset(double x, double y) {m_offsetX+=x/m_zoom; m_offsetY+=y/m_zoom;};
+    void addOffset(U_2DCoord off) {m_offsetX+=off.x/m_zoom; m_offsetY+=off.y/m_zoom;};
+    void follow(Guy *guy);
 
     // set the absolute zoom
     void setZoom(double zoom) {m_zoom = zoom;};

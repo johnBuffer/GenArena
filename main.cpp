@@ -23,10 +23,16 @@ int main()
     sf::Vector2i dragClicPosition;
 
     // add a test guy
-    gameWorld.addNewGuy(U_2DCoord(200, 200));
+    Guy* newGuy = gameWorld.addNewGuy(U_2DCoord(200, 200));
+    displayManager.follow(newGuy);
 
     // add more test guys
-    for (int i(0); i<100; ++i) gameWorld.addNewGuy(U_2DCoord(rand()%2000, rand()%2000));
+    for (int i(0); i<20; ++i)
+    {
+        Guy* stalker = gameWorld.addNewGuy(U_2DCoord(rand()%2000, rand()%2000));
+        stalker->stalk(newGuy);
+        newGuy = stalker;
+    }
 
     while (window.isOpen())
     {
