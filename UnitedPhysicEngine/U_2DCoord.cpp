@@ -1,4 +1,5 @@
 #include "U_2DCoord.h"
+#include <cmath>
 
 U_2DCoord::U_2DCoord()
 {
@@ -18,15 +19,7 @@ void U_2DCoord::move2D(U_2DCoord& vec)
     this->y += vec.y;
 }
 
-double U_2DCoord::dist2(U_2DCoord& u2dc)
+double U_2DCoord::getNorm()
 {
-    double d2;
-    double vx, vy;
-
-    vx = x-u2dc.x;
-    vy = y-u2dc.y;
-
-    d2 = vx*vx+vy*vy;
-
-    return d2;
+    return sqrt(x*x+y*y);
 }

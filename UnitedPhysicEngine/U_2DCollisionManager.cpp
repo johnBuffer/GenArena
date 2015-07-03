@@ -96,10 +96,10 @@ void U_2DCollisionManager::solveBoundCollisions(U_2DBody* body)
 
     int radius = m_bodySize/2;
 
-    if (bodyY+radius > maxY-1) body->setY(maxY-radius);
-    if (bodyX+radius > maxX-1) body->setX(maxX-radius);
-    if (bodyY-radius < 0) body->setY(radius);
-    if (bodyX-radius < 0) body->setX(radius);
+    if (bodyY+radius > maxY-1) body->setY(maxY-1*radius);
+    if (bodyX+radius > maxX-1) body->setX(maxX-1*radius);
+    if (bodyY-radius < 0) body->setY(1*radius);
+    if (bodyX-radius < 0) body->setX(1*radius);
 }
 
 void U_2DCollisionManager::solveGridCollisions(std::vector<U_2DBody*> bodies)
@@ -160,6 +160,7 @@ void U_2DCollisionManager::update()
     {
         solveCollisions();
         solveConstraints();
+        solveAttractions();
     }
     int n_bodies = m_bodies.size();
     for (int i(0); i<n_bodies; ++i) m_bodies[i]->updatePosition(m_timeStep);
@@ -174,4 +175,15 @@ void U_2DCollisionManager::solveConstraints()
 void U_2DCollisionManager::addConstraint(U_2DBody* b1, U_2DBody* b2, double length)
 {
     m_constraints.push_back(new U_2DConstraint(b1, b2, length));
+}
+
+void U_2DCollisionManager::addAttraction(U_2DBody* b1, U_2DBody* b2, double strength)
+{
+    m_attractions.push_back(new U_2DAttraction(b1, b2, strength));
+}
+
+void U_2DCollisionManager::solveAttractions()
+{
+    int n_attractions = m_attractions.size();
+    for (int i=0; i<n_attractions; ++i) m_attractions[i]->applyAttraction();
 }

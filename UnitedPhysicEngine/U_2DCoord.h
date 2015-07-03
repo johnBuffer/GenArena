@@ -8,9 +8,7 @@ public:
     U_2DCoord(double x, double y);
 
     void move2D(U_2DCoord& vec);
-    double dist2(U_2DCoord& u2dc);
-
-
+    double getNorm();
 
     double x, y;
 

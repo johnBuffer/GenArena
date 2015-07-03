@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="GenArena" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/GenArena" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="C:/Users/John/Documents/Cpp/SFML-2.3/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="C:\Users\John\Documents\Cpp\SFML-2.3\lib\libsfml-graphics.a" />
+					<Add library="C:\Users\John\Documents\Cpp\SFML-2.3\lib\libsfml-window.a" />
+					<Add library="C:\Users\John\Documents\Cpp\SFML-2.3\lib\libsfml-system.a" />
+					<Add directory="C:/Users/John/Documents/Cpp/SFML-2.3/lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="DisplayManager.cpp" />
+		<Unit filename="DisplayManager.h" />
+		<Unit filename="Dna.cpp" />
+		<Unit filename="Dna.h" />
+		<Unit filename="GameWorld.cpp" />
+		<Unit filename="GameWorld.h" />
+		<Unit filename="Guy.cpp" />
+		<Unit filename="Guy.h" />
+		<Unit filename="UnitedPhysicEngine/U_2DBody.cpp" />
+		<Unit filename="UnitedPhysicEngine/U_2DBody.h" />
+		<Unit filename="UnitedPhysicEngine/U_2DCollisionManager.cpp" />
+		<Unit filename="UnitedPhysicEngine/U_2DCollisionManager.h" />
+		<Unit filename="UnitedPhysicEngine/U_2DConstraint.cpp" />
+		<Unit filename="UnitedPhysicEngine/U_2DConstraint.h" />
+		<Unit filename="UnitedPhysicEngine/U_2DCoord.cpp" />
+		<Unit filename="UnitedPhysicEngine/U_2DCoord.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

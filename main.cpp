@@ -26,7 +26,7 @@ int main()
     gameWorld.addNewGuy(U_2DCoord(200, 200));
 
     // add more test guys
-    for (int i(0); i<500; ++i) gameWorld.addNewGuy(U_2DCoord(rand()%2000, rand()%2000));
+    for (int i(0); i<100; ++i) gameWorld.addNewGuy(U_2DCoord(rand()%2000, rand()%2000));
 
     while (window.isOpen())
     {
@@ -66,6 +66,7 @@ int main()
                     windowHeight = event.size.height;
 
                     window.create(sf::VideoMode(windowWidth, windowHeight), "Genetic", sf::Style::Default, settings);
+                    window.setVerticalSyncEnabled(true);
                     break;
 				default:
                     break;

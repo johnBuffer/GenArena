@@ -10,9 +10,9 @@ public:
     void move2D(U_2DCoord vec);
     void accelerate2D(U_2DCoord acc);
     void updatePosition(double timestep);
-    void setX(double x) {m_position.x = x;};
-    void setY(double y) {m_position.y = y;};
-    void stop() {m_lastPosition = m_position;};
+    void setX(double x) {m_position.x = x;};// m_lastPosition.x = x;};
+    void setY(double y) {m_position.y = y;};// m_lastPosition.y = y;};
+	void stop() {m_lastPosition = m_position;};
     U_2DCoord getPosition() const {return m_position;};
     void setStatic(bool isStatic) {m_static = isStatic;};
     bool isStatic() const {return m_static;};
